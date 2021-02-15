@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Tab from 'react-bootstrap/Tab'
+import Tabs from 'react-bootstrap/Tabs'
+
+import FinalPrincipal from './Components/Forms/FinalPrincipal';
+import TimeRequired from './Components/Forms/TimeRequired';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h2>Compound Interest Calculator</h2>
+
+        <Tabs defaultActiveKey="finalPrincipalTab" id="calculators">
+          <Tab eventKey="finalPrincipalTab" title="Final Principal">
+            <FinalPrincipal />
+          </Tab>
+          <Tab eventKey="timeRequiredTab" title="Time Required">
+            <TimeRequired />
+          </Tab>
+        </Tabs>
     </div>
   );
 }
