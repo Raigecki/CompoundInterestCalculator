@@ -6,7 +6,7 @@ import {Forms} from './FormEnum'
 function FormTable(props) {
 
   const [values, setValues] = useState({}) 
-  console.log(values)
+  console.log('Values: ' + values)
 
   return (
     <div>
